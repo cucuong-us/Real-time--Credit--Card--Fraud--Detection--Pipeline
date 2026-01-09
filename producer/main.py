@@ -4,51 +4,70 @@ import random
 import csv
 import os
 from kafka import KafkaProducer
-from kafka.errors import NoBrokersAvailable  # THÊM DÒNG NÀY
-# Cấu hình từ môi trường hoặc mặc định
-BOOTSTRAP_SERVERS = os.getenv('KAFKA_SERVERS', 'localhost:9092')
+from dotenv import load_dotenv
+
+# Load biến môi trường
+load_dotenv()
+
+# Lấy biến từ .env (tên biến thống nhất như ta đã sửa ở các bước trước)
+CONNECTION_STR = os.getenv('EVENT_HUBS_CONNECTION_STRING')
 TOPIC_NAME = os.getenv('KAFKA_TOPIC', 'transactions')
-CSV_FILE_PATH = os.getenv('CSV_PATH', '/opt/spark/apps/transactions_source.csv')
+CSV_FILE_PATH = os.getenv('CSV_PATH', '/app/transactions_source.csv')
 
 def run_producer():
-    # Khởi tạo producer với thêm các tham số tin cậy
+    if not CONNECTION_STR:
+        print("❌ LỖI: Không tìm thấy EVENT_HUBS_CONNECTION_STRING")
+        return
+
+    # Tách lấy Bootstrap Server từ Connection String
+    # Ví dụ: Endpoint=sb://abc.servicebus.windows.net/ -> abc.servicebus.windows.net:9093
+    try:
+        BOOTSTRAP_SERVER = CONNECTION_STR.split(';')[0].replace('Endpoint=sb://', '').strip('/') + ':9093'
+    except:
+        print("❌ LỖI: Connection String không đúng định dạng Azure")
+        return
+
+    print(f"🔄 Đang kết nối tới Azure Event Hubs tại: {BOOTSTRAP_SERVER}...")
+
     producer = None
     while not producer:
         try:
+            # Cấu hình đặc thù cho Azure Event Hubs
             producer = KafkaProducer(
-                bootstrap_servers=BOOTSTRAP_SERVERS.split(','),
+                bootstrap_servers=[BOOTSTRAP_SERVER],
+                security_protocol='SASL_SSL',
+                sasl_mechanism='PLAIN',
+                sasl_plain_username='$ConnectionString', # BẮT BUỘC giữ nguyên chuỗi này
+                sasl_plain_password=CONNECTION_STR,      # Toàn bộ chuỗi Connection String
                 value_serializer=lambda x: json.dumps(x).encode('utf-8'),
-                acks='all'
+                acks='all',
+                request_timeout_ms=60000, # Tăng timeout lên 60s cho mạng ổn định
+                retries=5
             )
-            print("✅ Đã kết nối thành công tới Kafka!")
-        except NoBrokersAvailable:
-            print("❌ Kafka chưa sẵn sàng, đang thử lại sau 5 giây...")
-            time.sleep(5)
+            print("✅ KẾT NỐI THÀNH CÔNG!")
+        except Exception as e:
+            print(f"❌ Thất bại: {e}. Thử lại sau 10 giây...")
+            time.sleep(10)
 
-    print(f"--- 🚀 Producer started. Sending to {TOPIC_NAME} ---")
-    
+    # Đọc CSV và gửi dữ liệu
     try:
-        if not os.path.exists(CSV_FILE_PATH):
-            raise FileNotFoundError(f"Không thấy file tại {CSV_FILE_PATH}")
-
-        with open(CSV_FILE_PATH, mode='r', encoding='utf-8-sig') as csv_file:
-            csv_reader = csv.DictReader(csv_file)
-            
-            for count, row in enumerate(csv_reader, 1):
-                # Gửi dữ liệu
+        with open(CSV_FILE_PATH, mode='r', encoding='utf-8-sig') as f:
+            reader = csv.DictReader(f)
+            for i, row in enumerate(reader, 1):
                 producer.send(TOPIC_NAME, value=row)
-                producer.flush() 
-                
-                print(f"[{count}] Sent: User {row.get('User')} | Amount: {row.get('Amount')}")
-                
-                # Delay ngẫu nhiên
-                time.sleep(random.uniform(1, 5))
-                
+                if i % 10 == 0: # Cứ 10 dòng thì flush một lần cho mượt
+                    producer.flush()
+                print(f"[{i}] ☁️ Đã gửi giao dịch của User {row.get('User')} lên Azure")
+                time.sleep(random.uniform(0.4, 0.8)) # Giả lập thời gian thực
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"❌ Lỗi khi đang gửi: {e}")
     finally:
-        producer.close()
-        print("--- 🛑 Producer closed ---")
+        if producer:
+            producer.close()
 
 if __name__ == '__main__':
-    run_producer()
+    # Vòng lặp chính: Nếu sập thì tự khởi động lại sau 10s
+    while True:
+        run_producer()
+        print("🛑 Producer tạm nghỉ. Khởi động lại sau 10 giây...")
+        time.sleep(10)

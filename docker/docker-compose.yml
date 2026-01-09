@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # --- HẠ TẦNG: KAFKA & ZOOKEEPER ---
   zookeeper:
@@ -45,8 +43,13 @@ services:
     container_name: credit-card-producer
     depends_on:
       - kafka
+    # 1. Liên kết file .env từ thư mục gốc vào container
+    env_file:
+      - ../.env
     environment:
       - PYTHONUNBUFFERED=1
+      # Sử dụng biến từ .env
+      - EVENT_HUBS_CONNECTION_STRING=${EVENT_HUBS_CONNECTION_STRING}
       - KAFKA_SERVERS=kafka:29092
       - KAFKA_TOPIC=transactions
       - CSV_PATH=/app/transactions_source.csv
