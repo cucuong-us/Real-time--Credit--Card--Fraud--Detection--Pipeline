@@ -11,7 +11,9 @@ targets:
     default: true
     workspace:
       host: https://adb-7405611376491031.11.azuredatabricks.net
-
+sync:
+  include:
+    - ".env"
   ## Optionally, there could be 'staging' or 'prod' targets here.
   #
   # prod:

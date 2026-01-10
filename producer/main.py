@@ -58,7 +58,7 @@ def run_producer():
                 if i % 10 == 0: # Cứ 10 dòng thì flush một lần cho mượt
                     producer.flush()
                 print(f"[{i}] ☁️ Đã gửi giao dịch của User {row.get('User')} lên Azure")
-                time.sleep(random.uniform(0.4, 0.8)) # Giả lập thời gian thực
+                time.sleep(random.uniform(1, 5)) # Giả lập thời gian thực
     except Exception as e:
         print(f"❌ Lỗi khi đang gửi: {e}")
     finally:
