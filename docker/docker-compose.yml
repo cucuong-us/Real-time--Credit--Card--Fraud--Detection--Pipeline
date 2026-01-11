@@ -60,16 +60,26 @@ services:
 
   # --- ORCHESTRATION: AIRFLOW (Mặc định: admin / admin) ---
   airflow:
-    image: apache/airflow:2.8.1-python3.10
+    build: 
+      context: .
+      dockerfile: Dockerfile.airflow
     container_name: airflow
-    depends_on:
-      - kafka
+    image: apache/airflow:2.8.1-python3.10
+    user: "50000:0"
     ports:
       - "8085:8080"
     environment:
-      - AIRFLOW__CORE__LOAD_EXAMPLES=False
       - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
-      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
-    command: standalone
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__WEBSERVER__USERNAME=admin  # Tên người dùng
+      - AIRFLOW__WEBSERVER__PASSWORD=admin  # Mật khẩu
     volumes:
       - ../dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: standalone
+    networks:
+      - data-network
+networks:
+  data-network:
+    driver: bridge
