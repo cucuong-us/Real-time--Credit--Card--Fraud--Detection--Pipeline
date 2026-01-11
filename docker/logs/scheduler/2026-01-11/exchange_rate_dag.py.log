@@ -709,3 +709,94 @@
 [2026-01-11T06:34:11.785+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:34:11.785+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2026-01-11T06:34:11.812+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:34:11.812+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
 [2026-01-11T06:34:11.833+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.146 seconds
+[2026-01-11T06:34:42.283+0000] {processor.py:161} INFO - Started process (PID=344) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:34:42.284+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:34:42.286+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:34:42.285+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:34:42.306+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:34:42.349+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:34:42.348+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:34:42.400+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:34:42.400+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:34:42.436+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.160 seconds
+[2026-01-11T06:35:12.928+0000] {processor.py:161} INFO - Started process (PID=345) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:35:12.929+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:35:12.930+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:35:12.929+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:35:12.949+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:35:12.975+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:35:12.975+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:35:13.002+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:35:13.001+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:35:13.024+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.102 seconds
+[2026-01-11T06:35:43.381+0000] {processor.py:161} INFO - Started process (PID=346) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:35:43.382+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:35:43.383+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:35:43.383+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:35:43.402+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:35:43.426+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:35:43.426+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:35:43.453+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:35:43.452+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:35:43.473+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.097 seconds
+[2026-01-11T06:36:14.050+0000] {processor.py:161} INFO - Started process (PID=347) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:36:14.052+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:36:14.056+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:36:14.053+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:36:14.083+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:36:14.116+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:36:14.115+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:36:14.160+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:36:14.159+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:36:14.188+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.146 seconds
+[2026-01-11T06:36:44.711+0000] {processor.py:161} INFO - Started process (PID=348) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:36:44.712+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:36:44.713+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:36:44.713+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:36:44.731+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:36:44.759+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:36:44.759+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:36:44.787+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:36:44.787+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:36:44.811+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.106 seconds
+[2026-01-11T06:37:15.359+0000] {processor.py:161} INFO - Started process (PID=349) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:37:15.367+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:37:15.368+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:37:15.367+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:37:15.384+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:37:15.408+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:37:15.408+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:37:15.434+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:37:15.434+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:37:15.455+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.105 seconds
+[2026-01-11T06:37:45.960+0000] {processor.py:161} INFO - Started process (PID=350) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:37:45.961+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:37:45.962+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:37:45.961+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:37:45.979+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:37:46.004+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:37:46.004+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:37:46.031+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:37:46.030+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:37:46.054+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.099 seconds
+[2026-01-11T06:38:16.553+0000] {processor.py:161} INFO - Started process (PID=351) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:38:16.560+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:38:16.562+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:38:16.561+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:38:16.578+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:38:16.600+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:38:16.599+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:38:16.622+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:38:16.621+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:38:16.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.095 seconds
+[2026-01-11T06:38:47.202+0000] {processor.py:161} INFO - Started process (PID=352) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:38:47.209+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:38:47.211+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:38:47.210+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:38:47.229+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:38:47.252+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:38:47.252+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:38:47.277+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:38:47.277+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:38:47.298+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.104 seconds
+[2026-01-11T06:39:17.813+0000] {processor.py:161} INFO - Started process (PID=353) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:39:17.814+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:39:17.815+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:39:17.815+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:39:17.833+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:39:17.858+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:39:17.857+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:39:17.884+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:39:17.883+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:39:17.907+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.099 seconds
+[2026-01-11T06:39:48.475+0000] {processor.py:161} INFO - Started process (PID=354) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:39:48.476+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:39:48.478+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:39:48.477+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:39:48.499+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:39:48.527+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:39:48.527+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:39:48.555+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:39:48.555+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:30:00+00:00, run_after=2026-01-11 06:40:00+00:00
+[2026-01-11T06:39:48.580+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.113 seconds
+[2026-01-11T06:40:38.593+0000] {processor.py:161} INFO - Started process (PID=364) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:40:38.594+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:40:38.595+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:40:38.595+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:40:38.611+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:40:38.633+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:40:38.633+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:40:38.657+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:40:38.656+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:40:00+00:00, run_after=2026-01-11 06:50:00+00:00
+[2026-01-11T06:40:38.677+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.089 seconds
+[2026-01-11T06:41:08.740+0000] {processor.py:161} INFO - Started process (PID=365) to work on /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:41:08.741+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/exchange_rate_dag.py for tasks to queue
+[2026-01-11T06:41:08.742+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:41:08.742+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:41:08.759+0000] {processor.py:840} INFO - DAG(s) 'exchange_rate_crawler' retrieved from /opt/airflow/dags/exchange_rate_dag.py
+[2026-01-11T06:41:08.786+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:41:08.786+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-01-11T06:41:08.812+0000] {logging_mixin.py:188} INFO - [2026-01-11T06:41:08.812+0000] {dag.py:3823} INFO - Setting next_dagrun for exchange_rate_crawler to 2026-01-11 06:40:00+00:00, run_after=2026-01-11 06:50:00+00:00
+[2026-01-11T06:41:08.833+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/exchange_rate_dag.py took 0.098 seconds
