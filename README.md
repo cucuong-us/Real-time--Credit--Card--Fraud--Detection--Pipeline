@@ -126,7 +126,7 @@ There are two ways to deploy and run the notebooks on your Databricks cluster:
    - Select your active cluster within the extension.
 3. **Library Check**: Ensure the Maven library mentioned in Option 1 is already installed on the cluster via Web UI.
 4. **Execution**: 
-   - Open the local `.py` or `.ipynb` files.
+   - Open the local `.ipynb` files.
    - Click **Run on Databricks** to execute the logic of `Bronze.py`, `Silver.py`, and `Gold.py` sequentially.
 
 ---
