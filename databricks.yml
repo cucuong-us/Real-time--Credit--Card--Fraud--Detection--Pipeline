@@ -1,0 +1,21 @@
+# This is a Databricks asset bundle definition for Real-time--Credit--Card--Fraud--Detection--Pipeline.
+# The Databricks extension requires databricks.yml configuration file.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+
+bundle:
+  name: Real-time--Credit--Card--Fraud--Detection--Pipeline
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-7405611376491031.11.azuredatabricks.net
+sync:
+  include:
+    - ".env"
+  ## Optionally, there could be 'staging' or 'prod' targets here.
+  #
+  # prod:
+  #   workspace:
+  #     host: https://adb-7405611376491031.11.azuredatabricks.net

@@ -1,0 +1,4 @@
+FROM apache/airflow:2.8.1-python3.10
+
+# Cài đặt provider Databricks phiên bản ổn định
+RUN pip install --no-cache-dir "apache-airflow-providers-databricks==6.4.0"

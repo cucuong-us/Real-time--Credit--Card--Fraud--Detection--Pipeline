@@ -1,0 +1,23 @@
+[2026-01-13T05:30:05.037+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_rate_crawler.get_rate_and_save scheduled__2026-01-13T05:20:00+00:00 [queued]>
+[2026-01-13T05:30:05.045+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_rate_crawler.get_rate_and_save scheduled__2026-01-13T05:20:00+00:00 [queued]>
+[2026-01-13T05:30:05.046+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-01-13T05:30:05.062+0000] {taskinstance.py:2191} INFO - Executing <Task(DatabricksSubmitRunOperator): get_rate_and_save> on 2026-01-13 05:20:00+00:00
+[2026-01-13T05:30:05.074+0000] {standard_task_runner.py:60} INFO - Started process 904 to run task
+[2026-01-13T05:30:05.081+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'exchange_rate_crawler', 'get_rate_and_save', 'scheduled__2026-01-13T05:20:00+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/exchange_rate_dag.py', '--cfg-path', '/tmp/tmp588ph4wa']
+[2026-01-13T05:30:05.083+0000] {standard_task_runner.py:88} INFO - Job 48: Subtask get_rate_and_save
+[2026-01-13T05:30:05.127+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_rate_crawler.get_rate_and_save scheduled__2026-01-13T05:20:00+00:00 [running]> on host c971fff4d57a
+[2026-01-13T05:30:05.204+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='exchange_rate_crawler' AIRFLOW_CTX_TASK_ID='get_rate_and_save' AIRFLOW_CTX_EXECUTION_DATE='2026-01-13T05:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-13T05:20:00+00:00'
+[2026-01-13T05:30:05.210+0000] {base.py:83} INFO - Using connection ID 'databricks_default' for task execution.
+[2026-01-13T05:30:05.286+0000] {databricks_base.py:501} INFO - Using token auth.
+[2026-01-13T05:30:06.129+0000] {databricks.py:56} INFO - Run submitted with run_id: 645884290282252
+[2026-01-13T05:30:06.129+0000] {databricks_base.py:501} INFO - Using token auth.
+[2026-01-13T05:30:06.451+0000] {databricks_base.py:501} INFO - Using token auth.
+[2026-01-13T05:30:06.746+0000] {databricks.py:109} INFO - get_rate_and_save in run state: {'life_cycle_state': 'PENDING', 'result_state': '', 'state_message': ''}
+[2026-01-13T05:30:06.748+0000] {databricks.py:110} INFO - View run status, Spark UI, and logs at https://adb-7405611376491031.11.azuredatabricks.net/?o=7405611376491031#job/920447152527129/run/645884290282252
+[2026-01-13T05:30:06.748+0000] {databricks.py:111} INFO - Sleeping for 30 seconds.
+[2026-01-13T05:30:36.779+0000] {databricks_base.py:501} INFO - Using token auth.
+[2026-01-13T05:30:37.259+0000] {databricks.py:67} INFO - get_rate_and_save completed successfully.
+[2026-01-13T05:30:37.261+0000] {databricks.py:68} INFO - View run status, Spark UI, and logs at https://adb-7405611376491031.11.azuredatabricks.net/?o=7405611376491031#job/920447152527129/run/645884290282252
+[2026-01-13T05:30:37.268+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_rate_crawler, task_id=get_rate_and_save, execution_date=20260113T052000, start_date=20260113T053005, end_date=20260113T053037
+[2026-01-13T05:30:37.314+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-13T05:30:37.328+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
